@@ -1,5 +1,5 @@
 import Foundation
-import CryptoSwift
+import CommonCrypto
 
 public typealias Payload = [String: Any]
 
@@ -32,16 +32,22 @@ public enum Algorithm: CustomStringConvertible {
 
   /// Sign a message using the algorithm
   func sign(_ message: String) -> String {
-    func signHS(_ key: Data, variant: CryptoSwift.HMAC.Variant) -> String {
+    func signHS(_ key: Data, variant: Int) -> String {
+      
+      let signature = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: Int(CC_SHA256_DIGEST_LENGTH))
+      defer { signature.deallocate(capacity: Int(CC_SHA256_DIGEST_LENGTH)) }
+      
       let messageData = message.data(using: String.Encoding.utf8, allowLossyConversion: false)!
-      let mac = HMAC(key: key.bytes, variant: variant)
-      let result: [UInt8]
-      do {
-        result = try mac.authenticate(messageData.bytes)
-      } catch {
-        result = []
+
+      messageData.withUnsafeBytes { dataBytes in
+        key.withUnsafeBytes { keyBytes in
+          CCHmac(CCHmacAlgorithm(variant), keyBytes, key.count, dataBytes, messageData.count, signature)
+        }
       }
-      return base64encode(Data(bytes: result))
+      
+      let result = Data(bytes: signature, count: Int(CC_SHA256_DIGEST_LENGTH))
+
+      return base64encode(result)
     }
 
     switch self {
@@ -49,13 +55,13 @@ public enum Algorithm: CustomStringConvertible {
       return ""
 
     case .hs256(let key):
-      return signHS(key, variant: .sha256)
+      return signHS(key, variant: kCCHmacAlgSHA256)
 
     case .hs384(let key):
-      return signHS(key, variant: .sha384)
+      return signHS(key, variant: kCCHmacAlgSHA384)
 
     case .hs512(let key):
-      return signHS(key, variant: .sha512)
+      return signHS(key, variant: kCCHmacAlgSHA512)
     }
   }
 
