@@ -43,7 +43,7 @@ public enum Algorithm: CustomStringConvertible {
       case kCCHmacAlgSHA512:
         digestLength = Int(CC_SHA512_DIGEST_LENGTH)
       default:
-        return "" // Really: Throw
+        return ""
       }
       
       let signature = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLength)
