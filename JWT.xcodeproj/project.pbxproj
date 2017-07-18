@@ -242,6 +242,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 279D63B21AD07FFF0024E2BC /* Build configuration list for PBXNativeTarget "JWT-OSX" */;
 			buildPhases = (
+				CB7E84361F190459005C5341 /* Create CommonCrypto modulemap */,
 				279D63971AD07FFF0024E2BC /* Sources */,
 				279D63981AD07FFF0024E2BC /* Frameworks */,
 				279D63991AD07FFF0024E2BC /* Headers */,
@@ -260,6 +261,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 279D63B51AD07FFF0024E2BC /* Build configuration list for PBXNativeTarget "JWTTests" */;
 			buildPhases = (
+				CB7E843A1F1DE6FA005C5341 /* Create CommonCrypto modulemap */,
 				279D63A31AD07FFF0024E2BC /* Sources */,
 				279D63A41AD07FFF0024E2BC /* Frameworks */,
 				279D63A51AD07FFF0024E2BC /* Resources */,
@@ -278,6 +280,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD9B62201C7753D8005D4844 /* Build configuration list for PBXNativeTarget "JWT-iOS" */;
 			buildPhases = (
+				CB7E84371F1904C1005C5341 /* Create CommonCrypto modulemap */,
 				CD9B62161C7753D8005D4844 /* Sources */,
 				CD9B621B1C7753D8005D4844 /* Frameworks */,
 				CD9B621D1C7753D8005D4844 /* Headers */,
@@ -296,6 +299,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD9B62321C7753EC005D4844 /* Build configuration list for PBXNativeTarget "JWT-tvOS" */;
 			buildPhases = (
+				CB7E84381F1DE6A4005C5341 /* Create CommonCrypto modulemap */,
 				CD9B62281C7753EC005D4844 /* Sources */,
 				CD9B622D1C7753EC005D4844 /* Frameworks */,
 				CD9B622F1C7753EC005D4844 /* Headers */,
@@ -314,6 +318,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD9B62441C7753FB005D4844 /* Build configuration list for PBXNativeTarget "JWT-watchOS" */;
 			buildPhases = (
+				CB7E84391F1DE6B1005C5341 /* Create CommonCrypto modulemap */,
 				CD9B623A1C7753FB005D4844 /* Sources */,
 				CD9B623F1C7753FB005D4844 /* Frameworks */,
 				CD9B62411C7753FB005D4844 /* Headers */,
@@ -405,6 +410,79 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CB7E84361F190459005C5341 /* Create CommonCrypto modulemap */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Create CommonCrypto modulemap";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\nCC_PATH=\"$SRCROOT/CommonCrypto\"\necho \"$CC_PATH\"\n\nHEADER_FILE1=$SDKROOT/usr/include/CommonCrypto/CommonCrypto.h\nif [ ! -e $HEADER_FILE1 ] ; then\necho \"ERROR: The CommonCrypto.h header file could not be found.\"\nexit 1\nfi\n\nif [ -e $CC_PATH ] ; then\necho \"$CC_PATH exists...\"\nelse\nmkdir -p \"$CC_PATH\"\nfi\n\n# Write the module.map file\ncat <<_EOF_ > \"$CC_PATH/module.map\"\nmodule CommonCrypto [system] {\n    header \"$HEADER_FILE1\"\n    export *\n}\n_EOF_\necho \"Created CommonCrypto Module Map.  CommonCrypto Framework now available.\"";
+		};
+		CB7E84371F1904C1005C5341 /* Create CommonCrypto modulemap */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Create CommonCrypto modulemap";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\nCC_PATH=\"$SRCROOT/CommonCrypto\"\necho \"$CC_PATH\"\n\nHEADER_FILE1=$SDKROOT/usr/include/CommonCrypto/CommonCrypto.h\nif [ ! -e $HEADER_FILE1 ] ; then\necho \"ERROR: The CommonCrypto.h header file could not be found.\"\nexit 1\nfi\n\nif [ -e $CC_PATH ] ; then\necho \"$CC_PATH exists...\"\nelse\nmkdir -p \"$CC_PATH\"\nfi\n\n# Write the module.map file\ncat <<_EOF_ > \"$CC_PATH/module.map\"\nmodule CommonCrypto [system] {\n    header \"$HEADER_FILE1\"\n    export *\n}\n_EOF_\necho \"Created CommonCrypto Module Map.  CommonCrypto Framework now available.\"";
+		};
+		CB7E84381F1DE6A4005C5341 /* Create CommonCrypto modulemap */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Create CommonCrypto modulemap";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\nCC_PATH=\"$SRCROOT/CommonCrypto\"\necho \"$CC_PATH\"\n\nHEADER_FILE1=$SDKROOT/usr/include/CommonCrypto/CommonCrypto.h\nif [ ! -e $HEADER_FILE1 ] ; then\necho \"ERROR: The CommonCrypto.h header file could not be found.\"\nexit 1\nfi\n\nif [ -e $CC_PATH ] ; then\necho \"$CC_PATH exists...\"\nelse\nmkdir -p \"$CC_PATH\"\nfi\n\n# Write the module.map file\ncat <<_EOF_ > \"$CC_PATH/module.map\"\nmodule CommonCrypto [system] {\n    header \"$HEADER_FILE1\"\n    export *\n}\n_EOF_\necho \"Created CommonCrypto Module Map.  CommonCrypto Framework now available.\"";
+		};
+		CB7E84391F1DE6B1005C5341 /* Create CommonCrypto modulemap */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Create CommonCrypto modulemap";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\nCC_PATH=\"$SRCROOT/CommonCrypto\"\necho \"$CC_PATH\"\n\nHEADER_FILE1=$SDKROOT/usr/include/CommonCrypto/CommonCrypto.h\nif [ ! -e $HEADER_FILE1 ] ; then\necho \"ERROR: The CommonCrypto.h header file could not be found.\"\nexit 1\nfi\n\nif [ -e $CC_PATH ] ; then\necho \"$CC_PATH exists...\"\nelse\nmkdir -p \"$CC_PATH\"\nfi\n\n# Write the module.map file\ncat <<_EOF_ > \"$CC_PATH/module.map\"\nmodule CommonCrypto [system] {\n    header \"$HEADER_FILE1\"\n    export *\n}\n_EOF_\necho \"Created CommonCrypto Module Map.  CommonCrypto Framework now available.\"";
+		};
+		CB7E843A1F1DE6FA005C5341 /* Create CommonCrypto modulemap */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Create CommonCrypto modulemap";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\nCC_PATH=\"$SRCROOT/CommonCrypto\"\necho \"$CC_PATH\"\n\nHEADER_FILE1=$SDKROOT/usr/include/CommonCrypto/CommonCrypto.h\nif [ ! -e $HEADER_FILE1 ] ; then\necho \"ERROR: The CommonCrypto.h header file could not be found.\"\nexit 1\nfi\n\nif [ -e $CC_PATH ] ; then\necho \"$CC_PATH exists...\"\nelse\nmkdir -p \"$CC_PATH\"\nfi\n\n# Write the module.map file\ncat <<_EOF_ > \"$CC_PATH/module.map\"\nmodule CommonCrypto [system] {\n    header \"$HEADER_FILE1\"\n    export *\n}\n_EOF_\necho \"Created CommonCrypto Module Map.  CommonCrypto Framework now available.\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		279D63971AD07FFF0024E2BC /* Sources */ = {
@@ -525,6 +603,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = macosx;
+				SWIFT_INCLUDE_PATHS = "\"$SRCROOT/CommonCrypto\"";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -568,6 +647,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = macosx;
+				SWIFT_INCLUDE_PATHS = "\"$SRCROOT/CommonCrypto\"";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";

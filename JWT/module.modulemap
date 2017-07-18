@@ -1,3 +1,0 @@
-module CommonCrypto [system] {
-  export *
-}

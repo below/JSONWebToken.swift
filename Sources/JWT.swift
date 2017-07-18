@@ -34,8 +34,20 @@ public enum Algorithm: CustomStringConvertible {
   func sign(_ message: String) -> String {
     func signHS(_ key: Data, variant: Int) -> String {
       
-      let signature = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: Int(CC_SHA256_DIGEST_LENGTH))
-      defer { signature.deallocate(capacity: Int(CC_SHA256_DIGEST_LENGTH)) }
+      var digestLength : Int!
+      switch variant {
+      case kCCHmacAlgSHA256:
+        digestLength = Int(CC_SHA256_DIGEST_LENGTH)
+      case kCCHmacAlgSHA384:
+        digestLength = Int(CC_SHA384_DIGEST_LENGTH)
+      case kCCHmacAlgSHA512:
+        digestLength = Int(CC_SHA512_DIGEST_LENGTH)
+      default:
+        return "" // Really: Throw
+      }
+      
+      let signature = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLength)
+      defer { signature.deallocate(capacity: digestLength) }
       
       let messageData = message.data(using: String.Encoding.utf8, allowLossyConversion: false)!
 
@@ -45,7 +57,7 @@ public enum Algorithm: CustomStringConvertible {
         }
       }
       
-      let result = Data(bytes: signature, count: Int(CC_SHA256_DIGEST_LENGTH))
+      let result = Data(bytes: signature, count: digestLength)
 
       return base64encode(result)
     }
