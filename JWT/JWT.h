@@ -15,3 +15,5 @@ FOUNDATION_EXPORT double JWTVersionNumber;
 FOUNDATION_EXPORT const unsigned char JWTVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <JWT/PublicHeader.h>
+
+#import "CryptoWrap.h"

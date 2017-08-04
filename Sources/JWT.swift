@@ -1,5 +1,4 @@
 import Foundation
-import CommonCrypto
 
 public typealias Payload = [String: Any]
 
@@ -32,15 +31,15 @@ public enum Algorithm: CustomStringConvertible {
 
   /// Sign a message using the algorithm
   func sign(_ message: String) -> String {
-    func signHS(_ key: Data, variant: Int) -> String {
+    func signHS(_ key: Data, variant: CryptoWrapAlgorithm) -> String {
       
       var digestLength : Int!
       switch variant {
-      case kCCHmacAlgSHA256:
+      case CryptoWrap256:
         digestLength = Int(CC_SHA256_DIGEST_LENGTH)
-      case kCCHmacAlgSHA384:
+      case CryptoWrap384:
         digestLength = Int(CC_SHA384_DIGEST_LENGTH)
-      case kCCHmacAlgSHA512:
+      case CryptoWrap512:
         digestLength = Int(CC_SHA512_DIGEST_LENGTH)
       default:
         return ""
@@ -51,9 +50,11 @@ public enum Algorithm: CustomStringConvertible {
       
       let messageData = message.data(using: String.Encoding.utf8, allowLossyConversion: false)!
 
+      _ = CryptoWrap()
+      
       messageData.withUnsafeBytes { dataBytes in
         key.withUnsafeBytes { keyBytes in
-          CCHmac(CCHmacAlgorithm(variant), keyBytes, key.count, dataBytes, messageData.count, signature)
+          CCHmac(CCHmacAlgorithm(variant.rawValue), keyBytes, key.count, dataBytes, messageData.count, signature)
         }
       }
       
@@ -67,13 +68,13 @@ public enum Algorithm: CustomStringConvertible {
       return ""
 
     case .hs256(let key):
-      return signHS(key, variant: kCCHmacAlgSHA256)
+      return signHS(key, variant: CryptoWrap256)
 
     case .hs384(let key):
-      return signHS(key, variant: kCCHmacAlgSHA384)
+      return signHS(key, variant: CryptoWrap384)
 
     case .hs512(let key):
-      return signHS(key, variant: kCCHmacAlgSHA512)
+      return signHS(key, variant: CryptoWrap512)
     }
   }
 

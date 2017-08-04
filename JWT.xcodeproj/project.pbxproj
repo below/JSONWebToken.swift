@@ -26,6 +26,15 @@
 		520A71181C469F010005C709 /* Claims.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520A71141C469F010005C709 /* Claims.swift */; };
 		520A71191C469F010005C709 /* Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520A71151C469F010005C709 /* Decode.swift */; };
 		520A711A1C469F010005C709 /* JWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520A71161C469F010005C709 /* JWT.swift */; };
+		CBDE685E1F2B6D8D00278020 /* CryptoWrap.h in Headers */ = {isa = PBXBuildFile; fileRef = CBDE685C1F2B6D8D00278020 /* CryptoWrap.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBDE685F1F2B6D8D00278020 /* CryptoWrap.h in Headers */ = {isa = PBXBuildFile; fileRef = CBDE685C1F2B6D8D00278020 /* CryptoWrap.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBDE68601F2B6D8D00278020 /* CryptoWrap.h in Headers */ = {isa = PBXBuildFile; fileRef = CBDE685C1F2B6D8D00278020 /* CryptoWrap.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBDE68611F2B6D8D00278020 /* CryptoWrap.h in Headers */ = {isa = PBXBuildFile; fileRef = CBDE685C1F2B6D8D00278020 /* CryptoWrap.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBDE68621F2B6D8D00278020 /* CryptoWrap.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDE685D1F2B6D8D00278020 /* CryptoWrap.m */; };
+		CBDE68631F2B6D8D00278020 /* CryptoWrap.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDE685D1F2B6D8D00278020 /* CryptoWrap.m */; };
+		CBDE68641F2B6D8D00278020 /* CryptoWrap.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDE685D1F2B6D8D00278020 /* CryptoWrap.m */; };
+		CBDE68651F2B6D8D00278020 /* CryptoWrap.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDE685D1F2B6D8D00278020 /* CryptoWrap.m */; };
+		CBDE68661F2B6D8D00278020 /* CryptoWrap.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDE685D1F2B6D8D00278020 /* CryptoWrap.m */; };
 		CD9B62171C7753D8005D4844 /* Claims.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520A71141C469F010005C709 /* Claims.swift */; };
 		CD9B62181C7753D8005D4844 /* JWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520A71161C469F010005C709 /* JWT.swift */; };
 		CD9B62191C7753D8005D4844 /* Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520A71151C469F010005C709 /* Decode.swift */; };
@@ -69,6 +78,8 @@
 		520A71161C469F010005C709 /* JWT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JWT.swift; sourceTree = "<group>"; };
 		520A711B1C469F440005C709 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		540942F3614C41E3827F2013 /* Pods_JWT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JWT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBDE685C1F2B6D8D00278020 /* CryptoWrap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CryptoWrap.h; sourceTree = "<group>"; };
+		CBDE685D1F2B6D8D00278020 /* CryptoWrap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CryptoWrap.m; sourceTree = "<group>"; };
 		CD9B62231C7753D8005D4844 /* JWT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JWT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD9B62351C7753EC005D4844 /* JWT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JWT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD9B62471C7753FB005D4844 /* JWT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JWT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,6 +198,8 @@
 				520A71151C469F010005C709 /* Decode.swift */,
 				2777940F1DF22D0D00573F3E /* Encode.swift */,
 				520A71161C469F010005C709 /* JWT.swift */,
+				CBDE685C1F2B6D8D00278020 /* CryptoWrap.h */,
+				CBDE685D1F2B6D8D00278020 /* CryptoWrap.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -207,6 +220,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBDE685E1F2B6D8D00278020 /* CryptoWrap.h in Headers */,
 				279D63A21AD07FFF0024E2BC /* JWT.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,6 +229,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBDE685F1F2B6D8D00278020 /* CryptoWrap.h in Headers */,
 				CD9B621E1C7753D8005D4844 /* JWT.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,6 +238,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBDE68601F2B6D8D00278020 /* CryptoWrap.h in Headers */,
 				CD9B62301C7753EC005D4844 /* JWT.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,6 +247,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBDE68611F2B6D8D00278020 /* CryptoWrap.h in Headers */,
 				CD9B62421C7753FB005D4844 /* JWT.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,9 +363,20 @@
 				TargetAttributes = {
 					279D639B1AD07FFF0024E2BC = {
 						CreatedOnToolsVersion = 6.2;
+						LastSwiftMigration = 0900;
 					};
 					279D63A61AD07FFF0024E2BC = {
 						CreatedOnToolsVersion = 6.2;
+						LastSwiftMigration = 0900;
+					};
+					CD9B62131C7753D8005D4844 = {
+						LastSwiftMigration = 0900;
+					};
+					CD9B62251C7753EC005D4844 = {
+						LastSwiftMigration = 0900;
+					};
+					CD9B62371C7753FB005D4844 = {
+						LastSwiftMigration = 0900;
 					};
 				};
 			};
@@ -492,6 +520,7 @@
 				520A71181C469F010005C709 /* Claims.swift in Sources */,
 				520A711A1C469F010005C709 /* JWT.swift in Sources */,
 				520A71191C469F010005C709 /* Decode.swift in Sources */,
+				CBDE68621F2B6D8D00278020 /* CryptoWrap.m in Sources */,
 				277794101DF22D0D00573F3E /* Encode.swift in Sources */,
 				2777940B1DF22BE400573F3E /* JOSEHeader.swift in Sources */,
 				277794051DF221F800573F3E /* ClaimSet.swift in Sources */,
@@ -504,6 +533,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				279D63AF1AD07FFF0024E2BC /* JWTTests.swift in Sources */,
+				CBDE68661F2B6D8D00278020 /* CryptoWrap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +544,7 @@
 				CD9B62171C7753D8005D4844 /* Claims.swift in Sources */,
 				CD9B62181C7753D8005D4844 /* JWT.swift in Sources */,
 				CD9B62191C7753D8005D4844 /* Decode.swift in Sources */,
+				CBDE68631F2B6D8D00278020 /* CryptoWrap.m in Sources */,
 				277794111DF22D0D00573F3E /* Encode.swift in Sources */,
 				2777940C1DF22BE400573F3E /* JOSEHeader.swift in Sources */,
 				277794061DF221F800573F3E /* ClaimSet.swift in Sources */,
@@ -528,6 +559,7 @@
 				CD9B62291C7753EC005D4844 /* Claims.swift in Sources */,
 				CD9B622A1C7753EC005D4844 /* JWT.swift in Sources */,
 				CD9B622B1C7753EC005D4844 /* Decode.swift in Sources */,
+				CBDE68641F2B6D8D00278020 /* CryptoWrap.m in Sources */,
 				277794121DF22D0D00573F3E /* Encode.swift in Sources */,
 				2777940D1DF22BE400573F3E /* JOSEHeader.swift in Sources */,
 				277794071DF221F800573F3E /* ClaimSet.swift in Sources */,
@@ -542,6 +574,7 @@
 				CD9B623B1C7753FB005D4844 /* Claims.swift in Sources */,
 				CD9B623C1C7753FB005D4844 /* JWT.swift in Sources */,
 				CD9B623D1C7753FB005D4844 /* Decode.swift in Sources */,
+				CBDE68651F2B6D8D00278020 /* CryptoWrap.m in Sources */,
 				277794131DF22D0D00573F3E /* Encode.swift in Sources */,
 				2777940E1DF22BE400573F3E /* JOSEHeader.swift in Sources */,
 				277794081DF221F800573F3E /* ClaimSet.swift in Sources */,
@@ -658,6 +691,7 @@
 		279D63B31AD07FFF0024E2BC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -669,12 +703,15 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocode.$(PRODUCT_NAME:rfc1034identifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		279D63B41AD07FFF0024E2BC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -686,12 +723,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocode.$(PRODUCT_NAME:rfc1034identifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		279D63B61AD07FFF0024E2BC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -705,12 +744,16 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocode.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/JWTTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		279D63B71AD07FFF0024E2BC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -720,12 +763,15 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocode.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/JWTTests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		CD9B62211C7753D8005D4844 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -738,6 +784,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocode.$(PRODUCT_NAME:rfc1034identifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -745,6 +793,7 @@
 		CD9B62221C7753D8005D4844 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -757,6 +806,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocode.$(PRODUCT_NAME:rfc1034identifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -765,6 +815,7 @@
 		CD9B62331C7753EC005D4844 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -776,6 +827,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocode.$(PRODUCT_NAME:rfc1034identifier)";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -784,6 +837,7 @@
 		CD9B62341C7753EC005D4844 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -795,6 +849,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocode.$(PRODUCT_NAME:rfc1034identifier)";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALIDATE_PRODUCT = YES;
@@ -804,6 +859,7 @@
 		CD9B62451C7753FB005D4844 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -815,6 +871,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocode.$(PRODUCT_NAME:rfc1034identifier)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -823,6 +881,7 @@
 		CD9B62461C7753FB005D4844 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -834,6 +893,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocode.$(PRODUCT_NAME:rfc1034identifier)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
